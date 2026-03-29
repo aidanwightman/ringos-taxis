@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ringostaxis.co.uk/</loc>
+    <loc>https://ringotaxis.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ringostaxis.co.uk/disabled-access</loc>
+    <loc>https://ringotaxis.com/disabled-access</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ringostaxis.co.uk/airport-trips</loc>
+    <loc>https://ringotaxis.com/airport-trips</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ringostaxis.co.uk/service-areas</loc>
+    <loc>https://ringotaxis.com/service-areas</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ringostaxis.co.uk/request-a-call</loc>
+    <loc>https://ringotaxis.com/request-a-call</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>

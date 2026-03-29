@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ringostaxis.co.uk/sitemap.xml
+Sitemap: https://ringotaxis.com/sitemap.xml
