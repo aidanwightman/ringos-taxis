@@ -25,13 +25,13 @@ const HeroSection = () => (
           </span>
         </div>
         <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-          Your Ride,<br />
-          <span className="text-yp-yellow">On Time,</span><br />
-          Every Time.
+          Your Local<br />
+          <span className="text-yp-yellow">Ringwood Cab</span><br />
+          & Bournemouth Taxis
         </h2>
         <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-md mb-6 sm:mb-8 leading-relaxed">
-          Wheelchair accessible taxis, airport transfers, and reliable local journeys
-          across Ringwood, Bournemouth & South UK.
+          Looking for Ringwood taxis or a cab in Bournemouth? Wheelchair accessible taxis, 
+          airport transfers, and reliable local journeys across the South UK.
         </p>
         <a
           href="tel:07387777202"
@@ -190,8 +190,8 @@ const CallToAction = () => (
 
 const Index = () => {
   usePageSEO({
-    title: "Ringwood Taxi & Bournemouth Airport Transfers | Ringo's Taxis",
-    description: "Looking for a Ringwood taxi or Bournemouth taxi? Ringo's Taxis offers reliable local rides, airport transfers, and disabled access vehicles. 24/7 service.",
+    title: "Ringwood Taxis & Bournemouth Taxis | Cab Bournemouth & Ringwood Cab",
+    description: "Looking for Ringwood taxis or a cab in Bournemouth? Ringo's Taxis offers reliable local rides, airport transfers, and disabled access vehicles. 24/7 service.",
   });
 
   return (
