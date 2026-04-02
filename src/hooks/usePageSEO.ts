@@ -14,7 +14,7 @@ export function usePageSEO({ title, description }: PageSEOProps) {
     const location = useLocation();
 
     useEffect(() => {
-        const baseUrl = "https://ringostaxis-south.co.uk";
+        const baseUrl = "https://ringotaxis.com";
         const currentUrl = `${baseUrl}${location.pathname}`;
 
         // Set document title

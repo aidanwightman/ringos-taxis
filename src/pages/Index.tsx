@@ -24,11 +24,11 @@ const HeroSection = () => (
             Ringwood's Trusted Taxi Service
           </span>
         </div>
-        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
           Your Local<br />
-          <span className="text-yp-yellow">Ringwood Cab</span><br />
-          & Bournemouth Taxis
-        </h2>
+          <span className="text-yp-yellow">Ringwood Taxis</span><br />
+          &amp; Bournemouth Cab
+        </h1>
         <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-md mb-6 sm:mb-8 leading-relaxed">
           Looking for Ringwood taxis or a cab in Bournemouth? Wheelchair accessible taxis, 
           airport transfers, and reliable local journeys across the South UK.
@@ -157,6 +157,62 @@ const TrustSection = () => (
   </section>
 );
 
+const AboutSection = () => (
+  <section className="py-12 sm:py-16 bg-white">
+    <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+        <div>
+          <span className="inline-block font-heading text-[10px] sm:text-xs tracking-[0.3em] uppercase text-yp-gold font-bold mb-2 sm:mb-3">
+            Your Local Taxi
+          </span>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-yp-dark mb-4">
+            Ringwood Taxis &amp; Bournemouth Taxis — Available 24/7
+          </h2>
+          <p className="text-sm sm:text-base text-yp-dark/70 leading-relaxed mb-4">
+            Based in Ringwood, Hampshire, Ringo's Taxis provides reliable local taxi services across Ringwood, Bournemouth, Christchurch, Poole, and the wider Hampshire and Dorset area. Whether you need a quick local journey, a late-night taxi, or a pre-booked airport transfer — we're here around the clock.
+          </p>
+          <p className="text-sm sm:text-base text-yp-dark/70 leading-relaxed mb-4">
+            As your local taxis specialists, we offer competitive fixed prices with no hidden charges. Our drivers know every route across Hampshire and Dorset, so you always get there on time. From taxi near me searches to longer county runs, we cover it all.
+          </p>
+          <p className="text-sm sm:text-base text-yp-dark/70 leading-relaxed">
+            We serve: Ringwood, Bournemouth, Christchurch, Ferndown, Verwood, New Milton, Wimborne, Poole, Fordingbridge, Lymington, Wareham and all surrounding areas throughout Hampshire and Dorset.
+          </p>
+        </div>
+        <div>
+          <span className="inline-block font-heading text-[10px] sm:text-xs tracking-[0.3em] uppercase text-yp-gold font-bold mb-2 sm:mb-3">
+            Why Choose Us
+          </span>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-yp-dark mb-4">
+            Ringwood's Most Trusted Taxi Service
+          </h2>
+          <ul className="space-y-3 text-sm sm:text-base text-yp-dark/70">
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-yp-yellow rotate-45 mt-2 shrink-0" />
+              <span><strong className="text-yp-dark">24/7 availability</strong> — Taxis available day and night, 365 days a year across Ringwood and Bournemouth.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-yp-yellow rotate-45 mt-2 shrink-0" />
+              <span><strong className="text-yp-dark">Local knowledge</strong> — Hampshire and Dorset born and bred. We know every shortcut, every road.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-yp-yellow rotate-45 mt-2 shrink-0" />
+              <span><strong className="text-yp-dark">Wheelchair accessible</strong> — Full disabled access vehicles with ramp. Dignified transport for all passengers.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-yp-yellow rotate-45 mt-2 shrink-0" />
+              <span><strong className="text-yp-dark">Airport transfers</strong> — On-time transfers to Bournemouth, Southampton, Heathrow, and Gatwick airports.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-yp-yellow rotate-45 mt-2 shrink-0" />
+              <span><strong className="text-yp-dark">4.9-star rated</strong> — Trusted by hundreds of passengers across Ringwood and Bournemouth.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const CallToAction = () => (
   <section className="py-12 sm:py-16 bg-gradient-to-b from-yp-cream to-white">
     <div className="max-w-[1400px] mx-auto px-4 sm:px-6 text-center">
@@ -190,8 +246,8 @@ const CallToAction = () => (
 
 const Index = () => {
   usePageSEO({
-    title: "Ringwood Taxis & Bournemouth Taxis | Cab Bournemouth & Ringwood Cab",
-    description: "Looking for Ringwood taxis or a cab in Bournemouth? Ringo's Taxis offers reliable local rides, airport transfers, and disabled access vehicles. 24/7 service.",
+    title: "Ringwood Taxis | Local Taxi Service — Hampshire & Dorset",
+    description: "Need a taxi in Ringwood, Bournemouth or across Hampshire and Dorset? Ringo's Taxis runs 24/7. Wheelchair accessible vehicles & airport transfers. Call 07387 777202.",
   });
 
   return (
@@ -199,6 +255,7 @@ const Index = () => {
       <HeroSection />
       <ServicesSection />
       <TrustSection />
+      <AboutSection />
       <CallToAction />
     </YellowPagesLayout>
   );
