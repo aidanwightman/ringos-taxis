@@ -44,10 +44,10 @@ const Navbar = () => {
                         />
                         <div>
                             <h1 className="font-display text-xl sm:text-2xl font-bold tracking-wide leading-none text-yp-dark">
-                                Ringo's Taxis
+                                Ringo Taxis
                             </h1>
                             <p className="text-[9px] sm:text-[10px] tracking-[0.25em] text-yp-dark/70 uppercase font-heading font-semibold">
-                                Est. Ringwood • Since Day One
+                                Premium Taxi Service in Ringwood &amp; Bournemouth
                             </p>
                         </div>
                     </Link>
