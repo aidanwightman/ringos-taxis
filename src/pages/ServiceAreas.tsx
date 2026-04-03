@@ -8,7 +8,7 @@ const serviceAreas = [
     { name: "Ringwood", desc: "Our home base — fast response times and local knowledge you can trust.", primary: true },
     { name: "Bournemouth", desc: "Full coverage across Bournemouth town centre, seafront, and suburbs.", primary: true },
     { name: "Christchurch", desc: "Serving Christchurch and Highcliffe for local and long-distance journeys.", primary: true },
-    { name: "Furlong", desc: "Reliable taxi service covering the Furlong area and surroundings.", primary: true },
+    { name: "Ferndown", desc: "Reliable taxi service covering the Ferndown area and surroundings.", primary: true },
     { name: "New Milton", desc: "Quick pickups and drop-offs throughout New Milton and Barton-on-Sea.", primary: false },
     { name: "Verwood", desc: "Covering Verwood, Three Legged Cross, and surrounding villages.", primary: false },
     { name: "Ferndown", desc: "Serving Ferndown, West Moors, and the Dorset heathlands area.", primary: false },
