@@ -25,7 +25,7 @@ const HeroSection = () => (
           </span>
         </div>
         <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-          Your Local, Premium<br />
+          Premium<br />
           <span className="text-yp-yellow">Taxi Service</span><br />
           in Ringwood &amp; Bournemouth
         </h1>
