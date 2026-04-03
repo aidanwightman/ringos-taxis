@@ -25,9 +25,9 @@ const HeroSection = () => (
           </span>
         </div>
         <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-          Your Local<br />
-          <span className="text-yp-yellow">Ringwood Taxis</span><br />
-          &amp; Bournemouth Cab
+          Your Local, Premium<br />
+          <span className="text-yp-yellow">Taxi Service</span><br />
+          in Ringwood &amp; Bournemouth
         </h1>
         <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-md mb-6 sm:mb-8 leading-relaxed">
           Looking for Ringwood taxis or a cab in Bournemouth? Wheelchair accessible taxis, 
