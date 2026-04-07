@@ -26,7 +26,7 @@ const Footer = () => (
 
         {/* Footer content */}
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-10 sm:py-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
                 {/* Brand */}
                 <div>
                     <div className="flex items-center gap-3 mb-4">
@@ -41,24 +41,21 @@ const Footer = () => (
                     </p>
                 </div>
 
-                {/* Quick Links */}
+                {/* Airport Transfers */}
                 <div>
                     <h3 className="font-heading font-bold text-sm tracking-wider text-yp-yellow uppercase mb-4 pb-2 border-b border-white/10">
-                        Quick Links
+                        Airport Transfers
                     </h3>
                     <ul className="space-y-2">
                         {[
-                            { label: "Home", path: "/" },
-                            { label: "Disabled Access", path: "/disabled-access" },
-                            { label: "Airport Trips", path: "/airport-trips" },
-                            { label: "Service Areas", path: "/service-areas" },
-                            { label: "Request a Call", path: "/request-a-call" },
+                            { label: "All Airport Trips", path: "/airport-trips" },
+                            { label: "Ringwood → Heathrow", path: "/ringwood-to-heathrow-taxi" },
+                            { label: "Ringwood → Gatwick", path: "/ringwood-to-gatwick-taxi" },
+                            { label: "Ringwood → Southampton", path: "/ringwood-to-southampton-airport-taxi" },
+                            { label: "Ringwood → Bournemouth", path: "/ringwood-to-bournemouth-airport-taxi" },
                         ].map(({ label, path }) => (
                             <li key={path}>
-                                <Link
-                                    to={path}
-                                    className="text-sm text-white/60 hover:text-yp-yellow transition-colors"
-                                >
+                                <Link to={path} className="text-sm text-white/60 hover:text-yp-yellow transition-colors">
                                     {label}
                                 </Link>
                             </li>
@@ -71,14 +68,28 @@ const Footer = () => (
                     <h3 className="font-heading font-bold text-sm tracking-wider text-yp-yellow uppercase mb-4 pb-2 border-b border-white/10">
                         Service Areas
                     </h3>
-                    <ul className="space-y-2 text-sm text-white/60">
-                        <li className="flex items-center gap-2"><MapPin className="w-3 h-3 text-yp-yellow" /> Ringwood</li>
-                        <li className="flex items-center gap-2"><MapPin className="w-3 h-3 text-yp-yellow" /> Bournemouth</li>
-                        <li className="flex items-center gap-2"><MapPin className="w-3 h-3 text-yp-yellow" /> Christchurch</li>
-                        <li className="flex items-center gap-2"><MapPin className="w-3 h-3 text-yp-yellow" /> Furlong</li>
-                        <li className="flex items-center gap-2"><MapPin className="w-3 h-3 text-yp-yellow" /> New Milton</li>
-                        <li className="flex items-center gap-2"><MapPin className="w-3 h-3 text-yp-yellow" /> Verwood</li>
-                        <li className="flex items-center gap-2"><MapPin className="w-3 h-3 text-yp-yellow" /> Ferndown</li>
+                    <ul className="space-y-2">
+                        {[
+                            { label: "Ringwood Taxis", path: "/ringwood-taxis" },
+                            { label: "New Forest Taxis", path: "/new-forest-taxis" },
+                            { label: "Bournemouth Taxis", path: "/bournemouth-taxis" },
+                            { label: "Taxi Fordingbridge", path: "/taxi-fordingbridge" },
+                            { label: "Taxi Verwood", path: "/taxi-verwood" },
+                            { label: "Taxi Ferndown", path: "/taxi-ferndown" },
+                            { label: "Taxi Wimborne", path: "/taxi-wimborne" },
+                            { label: "Taxi Christchurch", path: "/taxi-christchurch" },
+                            { label: "Taxi New Milton", path: "/taxi-new-milton" },
+                            { label: "Taxi Lyndhurst", path: "/taxi-lyndhurst" },
+                            { label: "Taxi Lymington", path: "/taxi-lymington" },
+                            { label: "Taxi Brockenhurst", path: "/taxi-brockenhurst" },
+                            { label: "Taxi Burley", path: "/taxi-burley" },
+                        ].map(({ label, path }) => (
+                            <li key={path}>
+                                <Link to={path} className="text-sm text-white/60 hover:text-yp-yellow transition-colors flex items-center gap-1.5">
+                                    <MapPin className="w-3 h-3 text-yp-yellow shrink-0" />{label}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
 

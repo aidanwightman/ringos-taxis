@@ -92,14 +92,34 @@
           {"@type": "City", "name": "New Milton"},
           {"@type": "City", "name": "Verwood"},
           {"@type": "City", "name": "Ferndown"},
-          {"@type": "City", "name": "Wimborne"},
+          {"@type": "City", "name": "Wimborne Minster"},
           {"@type": "City", "name": "Fordingbridge"},
           {"@type": "City", "name": "Lymington"},
+          {"@type": "City", "name": "Brockenhurst"},
+          {"@type": "City", "name": "Lyndhurst"},
+          {"@type": "City", "name": "Burley"},
+          {"@type": "City", "name": "Bransgore"},
+          {"@type": "City", "name": "Alderholt"},
+          {"@type": "City", "name": "Three Legged Cross"},
+          {"@type": "City", "name": "West Moors"},
+          {"@type": "City", "name": "Highcliffe"},
+          {"@type": "City", "name": "Totton"},
           {"@type": "City", "name": "Wareham"},
+          {"@type": "AdministrativeArea", "name": "New Forest"},
           {"@type": "AdministrativeArea", "name": "Hampshire"},
           {"@type": "AdministrativeArea", "name": "Dorset"}
         ],
-        "serviceType": ["Taxi Service", "Airport Transfer", "Wheelchair Accessible Transport"],
+        "serviceType": [
+          "Taxi Service",
+          "Private Hire",
+          "Airport Transfer",
+          "Wheelchair Accessible Transport",
+          "WAV Taxi",
+          "Disabled Transport",
+          "Mobility Taxi",
+          "Local Taxi",
+          "Long Distance Taxi"
+        ],
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
@@ -111,20 +131,15 @@
           "@type": "OfferCatalog",
           "name": "Taxi Services",
           "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Airport Transfers"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Wheelchair Accessible Taxis"
-              }
-            }
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Local Taxi Journeys — Ringwood & New Forest"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Airport Transfers — Bournemouth, Southampton, Heathrow, Gatwick"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wheelchair Accessible Taxis (WAV)"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Disabled & Mobility Transport"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private Hire — Fixed Price"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ringwood to Heathrow Airport Taxi"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ringwood to Gatwick Airport Taxi"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ringwood to Southampton Airport Taxi"}},
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ringwood to Bournemouth Airport Taxi"}}
           ]
         },
         "openingHoursSpecification": {

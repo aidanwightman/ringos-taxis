@@ -28,8 +28,8 @@ const features = [
 
 const DisabledAccess = () => {
     usePageSEO({
-        title: "Disabled Access Taxis | Ringo's Taxis",
-        description: "Wheelchair accessible vehicles for safe, comfortable, and dignified transportation across Ringwood, Bournemouth & South UK.",
+        title: "Wheelchair Accessible Taxi Ringwood | WAV & Disabled Transport — Ringo's Taxis",
+        description: "WAV taxi service in Ringwood & New Forest. Wheelchair accessible vehicles, disabled transport, and mobility taxis across Hampshire & Dorset. Call 07387 777202.",
     });
 
     return (
@@ -53,16 +53,14 @@ const DisabledAccess = () => {
                         {/* Content */}
                         <div>
                             <span className="inline-block font-heading text-[10px] sm:text-xs tracking-[0.3em] uppercase text-yp-gold font-bold mb-2 sm:mb-3">
-                                Accessible Transport
+                                WAV & Disabled Transport Ringwood
                             </span>
-                            <h2 className="font-display text-2xl sm:text-3xl font-bold text-yp-dark mb-4 sm:mb-6">
-                                Everyone Deserves a<br />
-                                <span className="text-yp-gold">Comfortable Ride</span>
-                            </h2>
+                            <h1 className="font-display text-2xl sm:text-3xl font-bold text-yp-dark mb-4 sm:mb-6">
+                                Wheelchair Accessible Taxi<br />
+                                <span className="text-yp-gold">Ringwood & New Forest</span>
+                            </h1>
                             <p className="text-sm sm:text-base text-yp-dark/70 leading-relaxed mb-6">
-                                At Ringo's Taxis, we believe transportation should be accessible to everyone.
-                                Our specially adapted vehicles feature hydraulic ramps, spacious interiors,
-                                and secure wheelchair fixings — so every passenger can travel with confidence and dignity.
+                                Ringo's Taxis operates fully wheelchair accessible vehicles (WAV) across Ringwood, the New Forest, Bournemouth, and Dorset. Our adapted taxis feature hydraulic ramps, secure wheelchair fastening points, and spacious interiors — so every passenger travels safely and with dignity.
                             </p>
                             <div className="space-y-3 mb-6 sm:mb-8">
                                 {["Hydraulic wheelchair ramps", "Secure wheelchair fastening", "Spacious interior", "Professional, trained drivers"].map((item) => (
@@ -80,6 +78,26 @@ const DisabledAccess = () => {
                                 <span className="phone-banner text-lg sm:text-xl">07387 777202</span>
                             </a>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* WAV / Disabled transport info */}
+            <section className="py-10 sm:py-14 bg-white border-t border-yp-dark/10">
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+                    <div className="max-w-3xl">
+                        <h2 className="font-display text-2xl sm:text-3xl font-bold text-yp-dark mb-4">
+                            WAV Taxi & Disabled Transport — Ringwood, New Forest & Dorset
+                        </h2>
+                        <p className="text-sm sm:text-base text-yp-dark/70 leading-relaxed mb-4">
+                            Whether you need a <strong>WAV taxi in Ringwood</strong>, a <strong>wheelchair accessible vehicle in the New Forest</strong>, or <strong>disabled transport across Dorset and Hampshire</strong>, Ringo's Taxis is here to help. We provide mobility taxis for passengers with disabilities, including those who use manual or powered wheelchairs, mobility scooters, and walking frames.
+                        </p>
+                        <p className="text-sm sm:text-base text-yp-dark/70 leading-relaxed mb-4">
+                            Our <strong>accessible taxi service</strong> covers Ringwood, Fordingbridge, Verwood, Ferndown, Wimborne, Christchurch, New Milton, Lyndhurst, Lymington, Brockenhurst, and all surrounding areas. We also provide <strong>accessible airport transfers</strong> to Bournemouth Airport, Southampton Airport, Heathrow, and Gatwick — with full ramp access and wheelchair securing throughout.
+                        </p>
+                        <p className="text-sm sm:text-base text-yp-dark/70 leading-relaxed">
+                            Carers and companions always travel free of charge. All drivers are disability-awareness trained. Call <strong>07387 777202</strong> to book your <strong>wheelchair friendly taxi</strong> — available 24/7.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -123,11 +141,10 @@ const DisabledAccess = () => {
             <section className="py-10 sm:py-14 bg-yp-dark text-center">
                 <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
                     <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4">
-                        Need an Accessible Taxi?
+                        Book a Wheelchair Accessible Taxi
                     </h2>
                     <p className="text-sm sm:text-base text-white/60 mb-6 sm:mb-8 max-w-md mx-auto">
-                        Call us now or request a callback — we're here to help you get where
-                        you need to go, comfortably and safely.
+                        Call now or request a callback to book your WAV taxi, disabled transport, or accessible airport transfer. Available 24/7 across Ringwood, New Forest &amp; Dorset.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a

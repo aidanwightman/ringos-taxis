@@ -1,4 +1,5 @@
 import { Plane, Phone, Clock, MapPin, ArrowRight, CheckCircle, Shield } from "lucide-react";
+
 import { Link } from "react-router-dom";
 import YellowPagesLayout from "@/components/YellowPagesLayout";
 import { usePageSEO } from "@/hooks/usePageSEO";
@@ -9,24 +10,28 @@ const airports = [
         code: "BOH",
         distance: "~25 mins from Ringwood",
         desc: "The closest airport to our base. Quick, reliable transfers for domestic and European flights.",
+        route: "/ringwood-to-bournemouth-airport-taxi",
     },
     {
         name: "Southampton Airport",
         code: "SOU",
         distance: "~45 mins from Ringwood",
         desc: "Popular for domestic flights and short-haul European destinations. Stress-free door-to-door service.",
+        route: "/ringwood-to-southampton-airport-taxi",
     },
     {
         name: "Heathrow Airport",
         code: "LHR",
         distance: "~1 hr 45 mins from Ringwood",
         desc: "London's busiest airport. We offer competitive rates and ensure you arrive with plenty of time.",
+        route: "/ringwood-to-heathrow-taxi",
     },
     {
         name: "Gatwick Airport",
         code: "LGW",
         distance: "~2 hrs from Ringwood",
         desc: "South London's major hub. Pre-book your transfer and relax — we'll handle the journey.",
+        route: "/ringwood-to-gatwick-taxi",
     },
 ];
 
@@ -120,22 +125,26 @@ const AirportTrips = () => {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {airports.map(({ name, code, distance, desc }) => (
-                            <div
+                        {airports.map(({ name, code, distance, desc, route }) => (
+                            <Link
                                 key={code}
-                                className="bg-white yp-border-thick p-6 sm:p-8 hover:shadow-lg transition-shadow"
+                                to={route}
+                                className="group bg-white yp-border-thick p-6 sm:p-8 hover:shadow-lg transition-shadow"
                             >
                                 <div className="flex items-start justify-between mb-3 sm:mb-4">
                                     <div>
-                                        <h3 className="font-display text-lg sm:text-xl font-bold text-yp-dark">{name}</h3>
+                                        <h3 className="font-display text-lg sm:text-xl font-bold text-yp-dark group-hover:text-yp-gold transition-colors">{name}</h3>
                                         <p className="text-xs text-yp-dark/50 font-heading tracking-wider">{distance}</p>
                                     </div>
                                     <span className="bg-yp-yellow px-3 py-1 font-heading font-bold text-xs sm:text-sm text-yp-dark tracking-wider">
                                         {code}
                                     </span>
                                 </div>
-                                <p className="text-sm text-yp-dark/60 leading-relaxed">{desc}</p>
-                            </div>
+                                <p className="text-sm text-yp-dark/60 leading-relaxed mb-3">{desc}</p>
+                                <span className="inline-flex items-center gap-1 text-xs font-heading font-bold text-yp-dark tracking-wider uppercase group-hover:text-yp-gold transition-colors">
+                                    View transfer details <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                                </span>
+                            </Link>
                         ))}
                     </div>
                 </div>
