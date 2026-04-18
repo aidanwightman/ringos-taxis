@@ -51,10 +51,7 @@ const AirportTrips = () => {
     });
 
     return (
-        <YellowPagesLayout
-            title="Airport Transfers"
-            description="Reliable, stress-free airport taxi transfers from Ringwood, Bournemouth & South UK to all major airports."
-        >
+        <YellowPagesLayout>
             {/* Hero with image */}
             <section className="bg-white">
                 <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-10 sm:py-14">

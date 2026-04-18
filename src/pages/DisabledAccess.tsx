@@ -33,10 +33,7 @@ const DisabledAccess = () => {
     });
 
     return (
-        <YellowPagesLayout
-            title="Disabled Access Taxis"
-            description="Wheelchair accessible vehicles for safe, comfortable, and dignified transportation across Ringwood, Bournemouth & South UK."
-        >
+        <YellowPagesLayout>
             {/* Hero image section */}
             <section className="bg-white">
                 <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-10 sm:py-14">

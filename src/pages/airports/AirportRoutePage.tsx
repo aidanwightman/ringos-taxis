@@ -1,5 +1,6 @@
 import { Phone, MapPin, Clock, Shield, CheckCircle, ArrowRight, Plane } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import YellowPagesLayout from "@/components/YellowPagesLayout";
 import RequestCallForm from "@/components/RequestCallForm";
 import { usePageSEO } from "@/hooks/usePageSEO";
@@ -32,6 +33,52 @@ const AirportRoutePage = ({
   nearbyPickups,
 }: AirportRoutePageProps) => {
   usePageSEO({ title: pageTitle, description: metaDescription });
+
+  const { pathname } = useLocation();
+  const pageUrl = `https://ringotaxis.com${pathname}`;
+
+  useEffect(() => {
+    const schema = [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ringotaxis.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Airport Transfers", "item": "https://ringotaxis.com/airport-trips" },
+          { "@type": "ListItem", "position": 3, "name": `${fromLocation} to ${toAirport}`, "item": pageUrl },
+        ],
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Airport Transfer",
+        "name": `${fromLocation} to ${toAirport} Taxi — Ringo's Taxis`,
+        "description": metaDescription,
+        "provider": {
+          "@type": "LocalBusiness",
+          "@id": "https://ringotaxis.com",
+          "name": "Ringo's Taxis",
+          "telephone": "+447387777202",
+        },
+        "areaServed": [
+          { "@type": "Place", "name": fromLocation },
+          { "@type": "Airport", "name": toAirport, "iataCode": airportCode },
+        ],
+        "url": pageUrl,
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "GBP",
+          "description": "Fixed price airport transfer — no hidden fees",
+        },
+      },
+    ];
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = `schema-airport-${airportCode.toLowerCase()}`;
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => { script.remove(); };
+  }, [fromLocation, toAirport, airportCode, metaDescription, pageUrl]);
 
   return (
     <YellowPagesLayout>

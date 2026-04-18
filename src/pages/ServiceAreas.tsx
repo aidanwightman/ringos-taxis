@@ -5,18 +5,19 @@ import RequestCallForm from "@/components/RequestCallForm";
 import { usePageSEO } from "@/hooks/usePageSEO";
 
 const serviceAreas = [
-    { name: "Ringwood", desc: "Our home base — fast response times and local knowledge you can trust.", primary: true },
-    { name: "Bournemouth", desc: "Full coverage across Bournemouth town centre, seafront, and suburbs.", primary: true },
-    { name: "Christchurch", desc: "Serving Christchurch and Highcliffe for local and long-distance journeys.", primary: true },
-    { name: "Ferndown", desc: "Reliable taxi service covering the Ferndown area and surroundings.", primary: true },
-    { name: "New Milton", desc: "Quick pickups and drop-offs throughout New Milton and Barton-on-Sea.", primary: false },
-    { name: "Verwood", desc: "Covering Verwood, Three Legged Cross, and surrounding villages.", primary: false },
-    { name: "Ferndown", desc: "Serving Ferndown, West Moors, and the Dorset heathlands area.", primary: false },
-    { name: "Wimborne", desc: "Taxi service across Wimborne Minster and neighbouring areas.", primary: false },
-    { name: "Poole", desc: "Covering Poole, Canford Cliffs, and Sandbanks for all journeys.", primary: false },
-    { name: "Fordingbridge", desc: "Serving Fordingbridge and the wider Avon Valley area.", primary: false },
-    { name: "Lymington", desc: "Taxi transfers to and from Lymington, including ferry connections.", primary: false },
-    { name: "Wareham", desc: "Covering Wareham, Corfe Castle, and the wider Purbeck area.", primary: false },
+    { name: "Ringwood", route: "/ringwood-taxis", desc: "Our home base — fast response times and local knowledge you can trust.", primary: true },
+    { name: "Bournemouth", route: "/bournemouth-taxis", desc: "Full coverage across Bournemouth town centre, seafront, and suburbs.", primary: true },
+    { name: "Christchurch", route: "/taxi-christchurch", desc: "Serving Christchurch and Highcliffe for local and long-distance journeys.", primary: true },
+    { name: "Ferndown", route: "/taxi-ferndown", desc: "Reliable taxi service covering Ferndown, West Moors, and the Dorset heathlands.", primary: true },
+    { name: "New Milton", route: "/taxi-new-milton", desc: "Quick pickups and drop-offs throughout New Milton and Barton-on-Sea.", primary: false },
+    { name: "Verwood", route: "/taxi-verwood", desc: "Covering Verwood, Three Legged Cross, and surrounding villages.", primary: false },
+    { name: "Wimborne", route: "/taxi-wimborne", desc: "Taxi service across Wimborne Minster and neighbouring areas.", primary: false },
+    { name: "Fordingbridge", route: "/taxi-fordingbridge", desc: "Serving Fordingbridge and the wider Avon Valley area.", primary: false },
+    { name: "Lymington", route: "/taxi-lymington", desc: "Taxi transfers to and from Lymington, including ferry connections.", primary: false },
+    { name: "Lyndhurst", route: "/taxi-lyndhurst", desc: "Serving the heart of the New Forest — Lyndhurst and surrounding villages.", primary: false },
+    { name: "Brockenhurst", route: "/taxi-brockenhurst", desc: "Covering Brockenhurst and the surrounding New Forest area.", primary: false },
+    { name: "Poole", route: null, desc: "Covering Poole, Canford Cliffs, and Sandbanks for all journeys.", primary: false },
+    { name: "Wareham", route: null, desc: "Covering Wareham, Corfe Castle, and the wider Purbeck area.", primary: false },
 ];
 
 const ServiceAreas = () => {
@@ -61,11 +62,11 @@ const ServiceAreas = () => {
 
                             {/* Primary areas highlight */}
                             <div className="grid grid-cols-2 gap-3 mb-6">
-                                {serviceAreas.filter(a => a.primary).map(({ name }) => (
-                                    <div key={name} className="flex items-center gap-2 bg-yp-yellow/20 px-3 py-2 border border-yp-yellow/40">
+                                {serviceAreas.filter(a => a.primary).map(({ name, route }) => (
+                                    <Link key={name} to={route ?? "/service-areas"} className="flex items-center gap-2 bg-yp-yellow/20 px-3 py-2 border border-yp-yellow/40 hover:bg-yp-yellow/40 transition-colors">
                                         <MapPin className="w-4 h-4 text-yp-gold shrink-0" />
                                         <span className="text-sm font-heading font-bold text-yp-dark">{name}</span>
-                                    </div>
+                                    </Link>
                                 ))}
                             </div>
 
@@ -99,24 +100,33 @@ const ServiceAreas = () => {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                        {serviceAreas.map(({ name, desc, primary }) => (
-                            <div
-                                key={name}
-                                className={`bg-white p-5 sm:p-6 border-l-4 hover:shadow-md transition-shadow ${primary ? "border-l-yp-yellow yp-border-thick" : "border-l-yp-dark/20 border border-yp-dark/10"
-                                    }`}
-                            >
-                                <div className="flex items-center gap-2 mb-2">
-                                    <MapPin className={`w-4 h-4 ${primary ? "text-yp-gold" : "text-yp-dark/40"}`} />
-                                    <h3 className="font-display text-base sm:text-lg font-bold text-yp-dark">{name}</h3>
-                                    {primary && (
-                                        <span className="ml-auto text-[9px] sm:text-[10px] font-heading font-bold tracking-wider text-yp-gold uppercase bg-yp-yellow/20 px-2 py-0.5">
-                                            Core Area
+                        {serviceAreas.map(({ name, route, desc, primary }) => {
+                            const cardClass = `group bg-white p-5 sm:p-6 border-l-4 hover:shadow-md transition-shadow ${primary ? "border-l-yp-yellow yp-border-thick" : "border-l-yp-dark/20 border border-yp-dark/10"}`;
+                            const inner = (
+                                <>
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <MapPin className={`w-4 h-4 ${primary ? "text-yp-gold" : "text-yp-dark/40"}`} />
+                                        <h3 className={`font-display text-base sm:text-lg font-bold text-yp-dark ${route ? "group-hover:text-yp-gold transition-colors" : ""}`}>{name}</h3>
+                                        {primary && (
+                                            <span className="ml-auto text-[9px] sm:text-[10px] font-heading font-bold tracking-wider text-yp-gold uppercase bg-yp-yellow/20 px-2 py-0.5">
+                                                Core Area
+                                            </span>
+                                        )}
+                                    </div>
+                                    <p className="text-xs sm:text-sm text-yp-dark/60 leading-relaxed">{desc}</p>
+                                    {route && (
+                                        <span className="inline-flex items-center gap-1 mt-3 text-[10px] font-heading font-bold text-yp-dark tracking-wider uppercase group-hover:text-yp-gold transition-colors">
+                                            View page <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                                         </span>
                                     )}
-                                </div>
-                                <p className="text-xs sm:text-sm text-yp-dark/60 leading-relaxed">{desc}</p>
-                            </div>
-                        ))}
+                                </>
+                            );
+                            return route ? (
+                                <Link key={name} to={route} className={cardClass}>{inner}</Link>
+                            ) : (
+                                <div key={name} className={cardClass}>{inner}</div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>

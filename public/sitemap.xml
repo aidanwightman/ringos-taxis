@@ -4,129 +4,105 @@
   <!-- Core pages -->
   <url>
     <loc>https://ringotaxis.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/disabled-access</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/airport-trips</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/service-areas</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/request-a-call</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
 
   <!-- Location pages — primary -->
   <url>
     <loc>https://ringotaxis.com/ringwood-taxis</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/bournemouth-taxis</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/hampshire-taxis</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/dorset-taxis</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/new-forest-taxis</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
 
   <!-- Location pages — towns -->
   <url>
     <loc>https://ringotaxis.com/taxi-fordingbridge</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/taxi-verwood</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/taxi-ferndown</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/taxi-wimborne</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/taxi-christchurch</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/taxi-new-milton</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/taxi-burley</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/taxi-lyndhurst</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/taxi-lymington</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/taxi-brockenhurst</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
 
   <!-- Airport route pages -->
   <url>
     <loc>https://ringotaxis.com/ringwood-to-heathrow-taxi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/ringwood-to-gatwick-taxi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/ringwood-to-southampton-airport-taxi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
   <url>
     <loc>https://ringotaxis.com/ringwood-to-bournemouth-airport-taxi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-04-18</lastmod>
   </url>
 
 </urlset>

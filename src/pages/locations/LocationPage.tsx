@@ -1,8 +1,29 @@
 import { Phone, MapPin, ArrowRight, Star, Clock, Shield } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import YellowPagesLayout from "@/components/YellowPagesLayout";
 import RequestCallForm from "@/components/RequestCallForm";
 import { usePageSEO } from "@/hooks/usePageSEO";
+
+// Map of town names to their dedicated page routes
+const areaRouteMap: Record<string, string> = {
+  "Ringwood": "/ringwood-taxis",
+  "Bournemouth": "/bournemouth-taxis",
+  "Christchurch": "/taxi-christchurch",
+  "Ferndown": "/taxi-ferndown",
+  "New Milton": "/taxi-new-milton",
+  "Verwood": "/taxi-verwood",
+  "Wimborne": "/taxi-wimborne",
+  "Wimborne Minster": "/taxi-wimborne",
+  "Fordingbridge": "/taxi-fordingbridge",
+  "Lymington": "/taxi-lymington",
+  "Lyndhurst": "/taxi-lyndhurst",
+  "Brockenhurst": "/taxi-brockenhurst",
+  "Burley": "/taxi-burley",
+  "New Forest": "/new-forest-taxis",
+  "Hampshire": "/hampshire-taxis",
+  "Dorset": "/dorset-taxis",
+};
 
 interface LocationPageProps {
   locationName: string;
@@ -26,6 +47,44 @@ const LocationPage = ({
   mapSrc,
 }: LocationPageProps) => {
   usePageSEO({ title: pageTitle, description: metaDescription });
+
+  const { pathname } = useLocation();
+  const pageUrl = `https://ringotaxis.com${pathname}`;
+
+  useEffect(() => {
+    const schema = [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ringotaxis.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://ringotaxis.com/service-areas" },
+          { "@type": "ListItem", "position": 3, "name": `${locationName} Taxis`, "item": pageUrl },
+        ],
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Taxi Service",
+        "name": `${locationName} Taxi Service — Ringo's Taxis`,
+        "description": metaDescription,
+        "provider": {
+          "@type": "LocalBusiness",
+          "@id": "https://ringotaxis.com",
+          "name": "Ringo's Taxis",
+          "telephone": "+447387777202",
+        },
+        "areaServed": { "@type": "City", "name": locationName },
+        "url": pageUrl,
+      },
+    ];
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = `schema-location-${locationName.toLowerCase().replace(/\s+/g, "-")}`;
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => { script.remove(); };
+  }, [locationName, metaDescription, pageUrl]);
 
   return (
     <YellowPagesLayout>
@@ -69,15 +128,27 @@ const LocationPage = ({
                     Areas We Cover Nearby
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {nearbyAreas.map((area) => (
-                      <span
-                        key={area}
-                        className="flex items-center gap-1 text-xs bg-white border border-yp-dark/10 px-2 py-1 text-yp-dark/70"
-                      >
-                        <MapPin className="w-3 h-3 text-yp-gold" />
-                        {area}
-                      </span>
-                    ))}
+                    {nearbyAreas.map((area) => {
+                      const route = areaRouteMap[area];
+                      return route ? (
+                        <Link
+                          key={area}
+                          to={route}
+                          className="flex items-center gap-1 text-xs bg-white border border-yp-dark/10 px-2 py-1 text-yp-dark/70 hover:border-yp-gold hover:text-yp-dark transition-colors"
+                        >
+                          <MapPin className="w-3 h-3 text-yp-gold" />
+                          {area}
+                        </Link>
+                      ) : (
+                        <span
+                          key={area}
+                          className="flex items-center gap-1 text-xs bg-white border border-yp-dark/10 px-2 py-1 text-yp-dark/70"
+                        >
+                          <MapPin className="w-3 h-3 text-yp-gold" />
+                          {area}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               )}
