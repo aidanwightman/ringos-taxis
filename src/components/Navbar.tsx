@@ -18,16 +18,16 @@ const Navbar = () => {
         <header className="w-full">
             {/* Top phone strip */}
             <div className="bg-yp-dark text-white py-2 px-4">
-                <div className="max-w-[1400px] mx-auto flex items-center justify-between">
-                    <span className="text-xs tracking-wider opacity-80">
-                        Serving Ringwood, Bournemouth & South UK
+                <div className="max-w-[1400px] mx-auto flex items-center justify-between gap-2">
+                    <span className="text-xs tracking-wider opacity-80 min-w-0 truncate">
+                        Serving Ringwood, Bournemouth &amp; South UK
                     </span>
                     <a
                         href="tel:07387777202"
-                        className="flex items-center gap-2 hover:text-yp-yellow transition-colors"
+                        className="flex items-center gap-1.5 hover:text-yp-yellow transition-colors whitespace-nowrap shrink-0"
                     >
-                        <Phone className="w-3.5 h-3.5" />
-                        <span className="phone-banner text-sm">07387 777202</span>
+                        <Phone className="w-3.5 h-3.5 shrink-0" />
+                        <span className="text-sm font-bold tracking-wide">07387 777202</span>
                     </a>
                 </div>
             </div>
@@ -44,9 +44,9 @@ const Navbar = () => {
                         />
                         <div>
                             <h1 className="font-display text-xl sm:text-2xl font-bold tracking-wide leading-none text-yp-dark">
-                                Ringo Taxis
+                                Ringo's Taxis
                             </h1>
-                            <p className="text-[9px] sm:text-[10px] tracking-[0.25em] text-yp-dark/70 uppercase font-heading font-semibold">
+                            <p className="hidden sm:block text-[9px] sm:text-[10px] tracking-[0.25em] text-yp-dark/70 uppercase font-heading font-semibold whitespace-nowrap">
                                 Premium Taxi Service in Ringwood &amp; Bournemouth
                             </p>
                         </div>
