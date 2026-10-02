@@ -48,7 +48,7 @@ export function usePageSEO({ title, description }: PageSEOProps) {
         canonical.setAttribute('href', currentUrl);
 
         // Update OG URL
-        let ogUrl = document.querySelector('meta[property="og:url"]');
+        const ogUrl = document.querySelector('meta[property="og:url"]');
         if (ogUrl) {
             ogUrl.setAttribute("content", currentUrl);
         }
