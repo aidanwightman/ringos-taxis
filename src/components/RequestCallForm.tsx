@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Phone, Mail, User, MapPin, MessageSquare, Send, CheckCircle } from "lucide-react";
-import { useState } from "react";
+import { useId, useState } from "react";
 
 // UK phone regex: mobile or landline
 const ukPhoneRegex = /^(?:(?:\+44\s?|0)(?:7\d{3}|\d{2,4})\s?\d{3,4}\s?\d{3,4})$/;
@@ -17,6 +17,8 @@ const requestCallSchema = z
             .or(z.literal("")),
         area: z.string().optional(),
         message: z.string().optional(),
+        // Honeypot — real users never see or fill this
+        botcheck: z.string().optional(),
     })
     .refine((data) => data.email !== "" || data.phone !== "", {
         message: "Please provide either an email address or a phone number",
@@ -24,6 +26,9 @@ const requestCallSchema = z
     });
 
 type RequestCallFormData = z.infer<typeof requestCallSchema>;
+
+// Public Web3Forms access key (safe to ship client-side). Submissions are emailed to the address it was created with.
+const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY as string | undefined;
 
 const areas = [
     "Ringwood",
@@ -44,11 +49,13 @@ interface RequestCallFormProps {
 
 const RequestCallForm = ({ compact = false }: RequestCallFormProps) => {
     const [submitted, setSubmitted] = useState(false);
+    const [sendError, setSendError] = useState(false);
+    const uid = useId();
 
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        formState: { errors, isSubmitting },
         reset,
     } = useForm<RequestCallFormData>({
         resolver: zodResolver(requestCallSchema),
@@ -58,16 +65,48 @@ const RequestCallForm = ({ compact = false }: RequestCallFormProps) => {
             phone: "",
             area: "",
             message: "",
+            botcheck: "",
         },
     });
 
-    const onSubmit = (data: RequestCallFormData) => {
-        console.log("Request a Call submission:", data);
-        setSubmitted(true);
-        setTimeout(() => {
-            setSubmitted(false);
-            reset();
-        }, 5000);
+    const onSubmit = async (data: RequestCallFormData) => {
+        setSendError(false);
+
+        if (!WEB3FORMS_KEY) {
+            console.error("VITE_WEB3FORMS_KEY is not set — form cannot send.");
+            setSendError(true);
+            return;
+        }
+
+        try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json", Accept: "application/json" },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_KEY,
+                    subject: `New call-back request from ${data.name}`,
+                    from_name: "Ringo's Taxis Website",
+                    botcheck: data.botcheck,
+                    name: data.name,
+                    email: data.email || "Not given",
+                    phone: data.phone || "Not given",
+                    area: data.area || "Not given",
+                    message: data.message || "",
+                    page: window.location.pathname,
+                }),
+            });
+            const json = await res.json();
+            if (!res.ok || !json.success) throw new Error(json.message || "Send failed");
+
+            setSubmitted(true);
+            setTimeout(() => {
+                setSubmitted(false);
+                reset();
+            }, 5000);
+        } catch (err) {
+            console.error("Request a Call submission failed:", err);
+            setSendError(true);
+        }
     };
 
     if (submitted) {
@@ -99,11 +138,12 @@ const RequestCallForm = ({ compact = false }: RequestCallFormProps) => {
             <div className="space-y-4">
                 {/* Name */}
                 <div>
-                    <label className="flex items-center gap-2 text-xs font-heading font-bold tracking-wider text-yp-dark uppercase mb-1.5">
+                    <label htmlFor={`${uid}-name`} className="flex items-center gap-2 text-xs font-heading font-bold tracking-wider text-yp-dark uppercase mb-1.5">
                         <User className="w-3.5 h-3.5" />
                         Your Name *
                     </label>
                     <input
+                        id={`${uid}-name`}
                         {...register("name")}
                         type="text"
                         placeholder="Enter your full name"
@@ -116,11 +156,12 @@ const RequestCallForm = ({ compact = false }: RequestCallFormProps) => {
 
                 {/* Email */}
                 <div>
-                    <label className="flex items-center gap-2 text-xs font-heading font-bold tracking-wider text-yp-dark uppercase mb-1.5">
+                    <label htmlFor={`${uid}-email`} className="flex items-center gap-2 text-xs font-heading font-bold tracking-wider text-yp-dark uppercase mb-1.5">
                         <Mail className="w-3.5 h-3.5" />
                         Email Address
                     </label>
                     <input
+                        id={`${uid}-email`}
                         {...register("email")}
                         type="email"
                         placeholder="your@email.com"
@@ -133,11 +174,12 @@ const RequestCallForm = ({ compact = false }: RequestCallFormProps) => {
 
                 {/* Phone */}
                 <div>
-                    <label className="flex items-center gap-2 text-xs font-heading font-bold tracking-wider text-yp-dark uppercase mb-1.5">
+                    <label htmlFor={`${uid}-phone`} className="flex items-center gap-2 text-xs font-heading font-bold tracking-wider text-yp-dark uppercase mb-1.5">
                         <Phone className="w-3.5 h-3.5" />
                         Phone Number
                     </label>
                     <input
+                        id={`${uid}-phone`}
                         {...register("phone")}
                         type="tel"
                         placeholder="07xxx xxxxxx"
@@ -153,11 +195,12 @@ const RequestCallForm = ({ compact = false }: RequestCallFormProps) => {
 
                 {/* Area */}
                 <div>
-                    <label className="flex items-center gap-2 text-xs font-heading font-bold tracking-wider text-yp-dark uppercase mb-1.5">
+                    <label htmlFor={`${uid}-area`} className="flex items-center gap-2 text-xs font-heading font-bold tracking-wider text-yp-dark uppercase mb-1.5">
                         <MapPin className="w-3.5 h-3.5" />
                         Your Area
                     </label>
                     <select
+                        id={`${uid}-area`}
                         {...register("area")}
                         className="w-full border-2 border-yp-dark/20 px-4 py-2.5 text-sm font-heading outline-none focus:border-yp-gold transition-colors bg-yp-cream/30 appearance-none cursor-pointer"
                     >
@@ -173,11 +216,12 @@ const RequestCallForm = ({ compact = false }: RequestCallFormProps) => {
                 {/* Message */}
                 {!compact && (
                     <div>
-                        <label className="flex items-center gap-2 text-xs font-heading font-bold tracking-wider text-yp-dark uppercase mb-1.5">
+                        <label htmlFor={`${uid}-message`} className="flex items-center gap-2 text-xs font-heading font-bold tracking-wider text-yp-dark uppercase mb-1.5">
                             <MessageSquare className="w-3.5 h-3.5" />
                             Message (Optional)
                         </label>
                         <textarea
+                            id={`${uid}-message`}
                             {...register("message")}
                             rows={3}
                             placeholder="Tell us about your journey..."
@@ -186,14 +230,32 @@ const RequestCallForm = ({ compact = false }: RequestCallFormProps) => {
                     </div>
                 )}
 
+                {/* Honeypot (hidden from users) */}
+                <input
+                    {...register("botcheck")}
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="hidden"
+                />
+
                 {/* Submit */}
                 <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 bg-yp-dark text-white font-heading font-bold text-sm tracking-[0.15em] uppercase py-3.5 hover:bg-black transition-colors mt-2"
+                    disabled={isSubmitting}
+                    className="w-full flex items-center justify-center gap-2 bg-yp-dark text-white font-heading font-bold text-sm tracking-[0.15em] uppercase py-3.5 hover:bg-black transition-colors mt-2 disabled:opacity-60 disabled:cursor-wait"
                 >
                     <Send className="w-4 h-4" />
-                    Request a Call Back
+                    {isSubmitting ? "Sending..." : "Request a Call Back"}
                 </button>
+
+                {sendError && (
+                    <p role="alert" className="text-sm text-red-600 text-center font-heading">
+                        Sorry, your request couldn't be sent. Please call us on{" "}
+                        <a href="tel:07387777202" className="font-bold underline">07387 777202</a>.
+                    </p>
+                )}
             </div>
         </form>
     );
