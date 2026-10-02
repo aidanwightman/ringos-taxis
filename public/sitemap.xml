@@ -3,106 +3,106 @@
 
   <!-- Core pages -->
   <url>
-    <loc>https://ringotaxis.com/</loc>
+    <loc>https://www.ringotaxis.com/</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ringotaxis.com/disabled-access</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ringotaxis.com/airport-trips</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+  <url>
+    <loc>https://www.ringotaxis.com/service-areas</loc>
     <lastmod>2026-04-18</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/disabled-access</loc>
-    <lastmod>2026-04-18</lastmod>
-  </url>
-  <url>
-    <loc>https://ringotaxis.com/airport-trips</loc>
-    <lastmod>2026-04-18</lastmod>
-  </url>
-  <url>
-    <loc>https://ringotaxis.com/service-areas</loc>
-    <lastmod>2026-04-18</lastmod>
-  </url>
-  <url>
-    <loc>https://ringotaxis.com/request-a-call</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/request-a-call</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
 
   <!-- Location pages — primary -->
   <url>
-    <loc>https://ringotaxis.com/ringwood-taxis</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/ringwood-taxis</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/bournemouth-taxis</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/bournemouth-taxis</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/hampshire-taxis</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/hampshire-taxis</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/dorset-taxis</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/dorset-taxis</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/new-forest-taxis</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/new-forest-taxis</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
 
   <!-- Location pages — towns -->
   <url>
-    <loc>https://ringotaxis.com/taxi-fordingbridge</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/taxi-fordingbridge</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/taxi-verwood</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/taxi-verwood</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/taxi-ferndown</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/taxi-ferndown</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/taxi-wimborne</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/taxi-wimborne</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/taxi-christchurch</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/taxi-christchurch</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/taxi-new-milton</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/taxi-new-milton</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/taxi-burley</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/taxi-burley</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/taxi-lyndhurst</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/taxi-lyndhurst</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/taxi-lymington</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/taxi-lymington</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/taxi-brockenhurst</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/taxi-brockenhurst</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
 
   <!-- Airport route pages -->
   <url>
-    <loc>https://ringotaxis.com/ringwood-to-heathrow-taxi</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/ringwood-to-heathrow-taxi</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/ringwood-to-gatwick-taxi</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/ringwood-to-gatwick-taxi</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/ringwood-to-southampton-airport-taxi</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/ringwood-to-southampton-airport-taxi</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
-    <loc>https://ringotaxis.com/ringwood-to-bournemouth-airport-taxi</loc>
-    <lastmod>2026-04-18</lastmod>
+    <loc>https://www.ringotaxis.com/ringwood-to-bournemouth-airport-taxi</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
 
 </urlset>

@@ -24,18 +24,18 @@ Ringwood, Bournemouth, Christchurch, Ferndown, Verwood, Wimborne, Fordingbridge,
 
 ## Key Pages
 
-- Home: https://ringotaxis.com/
-- Airport Transfers: https://ringotaxis.com/airport-trips
-- Wheelchair Accessible Taxis: https://ringotaxis.com/disabled-access
-- Service Areas: https://ringotaxis.com/service-areas
-- Ringwood Taxis: https://ringotaxis.com/ringwood-taxis
-- New Forest Taxis: https://ringotaxis.com/new-forest-taxis
-- Bournemouth Taxis: https://ringotaxis.com/bournemouth-taxis
-- Ringwood to Heathrow Taxi: https://ringotaxis.com/ringwood-to-heathrow-taxi
-- Ringwood to Gatwick Taxi: https://ringotaxis.com/ringwood-to-gatwick-taxi
-- Ringwood to Southampton Airport Taxi: https://ringotaxis.com/ringwood-to-southampton-airport-taxi
-- Ringwood to Bournemouth Airport Taxi: https://ringotaxis.com/ringwood-to-bournemouth-airport-taxi
-- Request a Call: https://ringotaxis.com/request-a-call
+- Home: https://www.ringotaxis.com/
+- Airport Transfers: https://www.ringotaxis.com/airport-trips
+- Wheelchair Accessible Taxis: https://www.ringotaxis.com/disabled-access
+- Service Areas: https://www.ringotaxis.com/service-areas
+- Ringwood Taxis: https://www.ringotaxis.com/ringwood-taxis
+- New Forest Taxis: https://www.ringotaxis.com/new-forest-taxis
+- Bournemouth Taxis: https://www.ringotaxis.com/bournemouth-taxis
+- Ringwood to Heathrow Taxi: https://www.ringotaxis.com/ringwood-to-heathrow-taxi
+- Ringwood to Gatwick Taxi: https://www.ringotaxis.com/ringwood-to-gatwick-taxi
+- Ringwood to Southampton Airport Taxi: https://www.ringotaxis.com/ringwood-to-southampton-airport-taxi
+- Ringwood to Bournemouth Airport Taxi: https://www.ringotaxis.com/ringwood-to-bournemouth-airport-taxi
+- Request a Call: https://www.ringotaxis.com/request-a-call
 
 ## Frequently Asked Questions
 
@@ -52,10 +52,10 @@ Yes. All airport transfers are fixed price — no meter, no surprises. We also t
 Bournemouth Airport (BOH), Southampton Airport (SOU), Heathrow Airport (LHR), and Gatwick Airport (LGW).
 
 **How do I book?**
-Call us on 07387 777202 or use the request-a-call form at https://ringotaxis.com/request-a-call
+Call us on 07387 777202 or use the request-a-call form at https://www.ringotaxis.com/request-a-call
 
 ## Contact
 
 - **Telephone:** +44 7387 777202
-- **Website:** https://ringotaxis.com
+- **Website:** https://www.ringotaxis.com
 - **Address:** Ringwood, Hampshire, BH24, United Kingdom

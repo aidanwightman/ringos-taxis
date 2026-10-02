@@ -35,7 +35,7 @@ const AirportRoutePage = ({
   usePageSEO({ title: pageTitle, description: metaDescription });
 
   const { pathname } = useLocation();
-  const pageUrl = `https://ringotaxis.com${pathname}`;
+  const pageUrl = `https://www.ringotaxis.com${pathname}`;
 
   useEffect(() => {
     const schema = [
@@ -43,8 +43,8 @@ const AirportRoutePage = ({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ringotaxis.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Airport Transfers", "item": "https://ringotaxis.com/airport-trips" },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ringotaxis.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Airport Transfers", "item": "https://www.ringotaxis.com/airport-trips" },
           { "@type": "ListItem", "position": 3, "name": `${fromLocation} to ${toAirport}`, "item": pageUrl },
         ],
       },
@@ -56,7 +56,7 @@ const AirportRoutePage = ({
         "description": metaDescription,
         "provider": {
           "@type": "LocalBusiness",
-          "@id": "https://ringotaxis.com",
+          "@id": "https://www.ringotaxis.com",
           "name": "Ringo's Taxis",
           "telephone": "+447387777202",
         },

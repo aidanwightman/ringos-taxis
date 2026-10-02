@@ -49,7 +49,7 @@ const LocationPage = ({
   usePageSEO({ title: pageTitle, description: metaDescription });
 
   const { pathname } = useLocation();
-  const pageUrl = `https://ringotaxis.com${pathname}`;
+  const pageUrl = `https://www.ringotaxis.com${pathname}`;
 
   useEffect(() => {
     const schema = [
@@ -57,8 +57,8 @@ const LocationPage = ({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ringotaxis.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://ringotaxis.com/service-areas" },
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ringotaxis.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.ringotaxis.com/service-areas" },
           { "@type": "ListItem", "position": 3, "name": `${locationName} Taxis`, "item": pageUrl },
         ],
       },
@@ -70,7 +70,7 @@ const LocationPage = ({
         "description": metaDescription,
         "provider": {
           "@type": "LocalBusiness",
-          "@id": "https://ringotaxis.com",
+          "@id": "https://www.ringotaxis.com",
           "name": "Ringo's Taxis",
           "telephone": "+447387777202",
         },
