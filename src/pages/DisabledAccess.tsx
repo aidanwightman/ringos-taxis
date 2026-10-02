@@ -26,6 +26,12 @@ const features = [
     },
 ];
 
+const taxiPhotos = [
+    { src: "/branded-taxi-side.webp", alt: "Ringo's Taxis branded wheelchair accessible taxi, side view" },
+    { src: "/disabled-access.jpeg", alt: "Wheelchair ramp extended at the rear of the taxi" },
+    { src: "/branded-taxi-front-close.webp", alt: "Front of the Ringo's Taxis branded taxi with roof sign" },
+];
+
 const DisabledAccess = () => {
     usePageSEO({
         title: "Wheelchair Accessible Taxi Ringwood | WAV & Disabled Transport — Ringo's Taxis",
@@ -128,6 +134,38 @@ const DisabledAccess = () => {
                                         <p className="text-sm text-yp-dark/60 leading-relaxed">{desc}</p>
                                     </div>
                                 </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Meet our taxi */}
+            <section className="py-12 sm:py-16 bg-white">
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+                    <div className="text-center mb-10 sm:mb-12">
+                        <h2 className="font-display text-2xl sm:text-3xl font-bold text-yp-dark">
+                            Meet Our Taxi
+                        </h2>
+                        <p className="mt-3 text-sm sm:text-base text-yp-dark/70 max-w-2xl mx-auto">
+                            Look out for the Ringo's Taxis livery — our wheelchair accessible vehicle, with ramp access, ready for your journey.
+                        </p>
+                        <div className="flex items-center justify-center gap-3 mt-4">
+                            <div className="h-px w-12 bg-yp-dark/20" />
+                            <div className="w-2 h-2 bg-yp-yellow rotate-45" />
+                            <div className="h-px w-12 bg-yp-dark/20" />
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                        {taxiPhotos.map(({ src, alt }) => (
+                            <div key={src} className="yp-border-thick overflow-hidden">
+                                <img
+                                    src={src}
+                                    alt={alt}
+                                    loading="lazy"
+                                    className="w-full h-64 sm:h-72 object-cover"
+                                />
                             </div>
                         ))}
                     </div>

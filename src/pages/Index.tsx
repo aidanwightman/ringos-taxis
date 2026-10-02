@@ -1,4 +1,4 @@
-import { Phone, Accessibility, Plane, MapPin, ArrowRight, Star, Shield, Clock } from "lucide-react";
+import { Phone, Accessibility, Plane, MapPin, ArrowRight, PoundSterling, Shield, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import YellowPagesLayout from "@/components/YellowPagesLayout";
 import RequestCallForm from "@/components/RequestCallForm";
@@ -71,9 +71,9 @@ const services = [
     icon: MapPin,
     title: "Local Journeys",
     desc: "Covering Ringwood, Bournemouth, Christchurch, Furlong, New Milton, Verwood & all surrounding areas.",
-    image: "/loading-bay.jpeg",
+    image: "/branded-taxi-front.webp",
     link: "/service-areas",
-    alt: "Taxi in loading bay ready for pickup",
+    alt: "Ringo's Taxis branded wheelchair accessible taxi",
   },
 ];
 
@@ -132,7 +132,7 @@ const ServicesSection = () => (
 );
 
 const trustPoints = [
-  { icon: Star, label: "5-Star Rated" },
+  { icon: PoundSterling, label: "Fixed Prices" },
   { icon: Shield, label: "Fully Insured" },
   { icon: Clock, label: "24/7 Available" },
   { icon: Accessibility, label: "Accessible" },
@@ -204,7 +204,7 @@ const AboutSection = () => (
             </li>
             <li className="flex items-start gap-3">
               <div className="w-2 h-2 bg-yp-yellow rotate-45 mt-2 shrink-0" />
-              <span><strong className="text-yp-dark">4.9-star rated</strong> — Trusted by hundreds of passengers across Ringwood and Bournemouth.</span>
+              <span><strong className="text-yp-dark">Fixed, upfront prices</strong> — Agreed before you travel. No meter, no hidden charges.</span>
             </li>
           </ul>
         </div>

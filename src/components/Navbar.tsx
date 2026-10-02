@@ -43,9 +43,9 @@ const Navbar = () => {
                             className="h-12 w-12 sm:h-14 sm:w-14 object-contain transition-transform group-hover:scale-105"
                         />
                         <div>
-                            <h1 className="font-display text-xl sm:text-2xl font-bold tracking-wide leading-none text-yp-dark">
+                            <span className="block font-display text-xl sm:text-2xl font-bold tracking-wide leading-none text-yp-dark">
                                 Ringo's Taxis
-                            </h1>
+                            </span>
                             <p className="hidden sm:block text-[9px] sm:text-[10px] tracking-[0.25em] text-yp-dark/70 uppercase font-heading font-semibold whitespace-nowrap">
                                 Premium Taxi Service in Ringwood &amp; Bournemouth
                             </p>

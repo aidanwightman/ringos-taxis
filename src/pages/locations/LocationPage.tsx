@@ -1,4 +1,4 @@
-import { Phone, MapPin, ArrowRight, Star, Clock, Shield } from "lucide-react";
+import { Phone, MapPin, ArrowRight, PoundSterling, Clock, Shield } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import YellowPagesLayout from "@/components/YellowPagesLayout";
@@ -117,6 +117,14 @@ const LocationPage = ({
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             <div className="space-y-4">
+              <div className="yp-border-thick overflow-hidden mb-2">
+                <img
+                  src="/branded-taxi-side.webp"
+                  alt={`Ringo's Taxis wheelchair accessible taxi serving ${locationName}`}
+                  loading="lazy"
+                  className="w-full h-56 sm:h-64 object-cover"
+                />
+              </div>
               {bodyParagraphs.map((para, i) => (
                 <p key={i} className="text-sm sm:text-base text-yp-dark/70 leading-relaxed">
                   {para}
@@ -170,7 +178,7 @@ const LocationPage = ({
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-3 gap-6">
             {[
-              { icon: Star, label: "5-Star Rated" },
+              { icon: PoundSterling, label: "Fixed Prices" },
               { icon: Clock, label: "24/7 Available" },
               { icon: Shield, label: "Fully Insured" },
             ].map(({ icon: Icon, label }) => (

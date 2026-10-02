@@ -176,6 +176,16 @@ const AirportRoutePage = ({
             </div>
 
             <div>
+              {/* Our taxi */}
+              <div className="yp-border-thick overflow-hidden mb-6">
+                <img
+                  src="/branded-taxi-front.webp"
+                  alt={`Ringo's Taxis branded taxi for ${fromLocation} to ${toAirport} transfers`}
+                  loading="lazy"
+                  className="w-full h-56 sm:h-64 object-cover"
+                />
+              </div>
+
               {/* Nearby pickups */}
               <div className="bg-yp-cream yp-border-thick p-5 sm:p-6 mb-6">
                 <p className="font-heading font-bold text-xs text-yp-dark tracking-wider uppercase mb-3">
