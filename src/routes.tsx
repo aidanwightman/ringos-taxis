@@ -4,6 +4,7 @@ import DisabledAccess from "@/pages/DisabledAccess";
 import AirportTrips from "@/pages/AirportTrips";
 import ServiceAreas from "@/pages/ServiceAreas";
 import RequestCall from "@/pages/RequestCall";
+import Privacy from "@/pages/Privacy";
 import RingwoodTaxis from "@/pages/locations/RingwoodTaxis";
 import BournemouthTaxis from "@/pages/locations/BournemouthTaxis";
 import HampshireTaxis from "@/pages/locations/HampshireTaxis";
@@ -31,6 +32,7 @@ export const routes: { path: string; element: ReactElement }[] = [
   { path: "/airport-trips", element: <AirportTrips /> },
   { path: "/service-areas", element: <ServiceAreas /> },
   { path: "/request-a-call", element: <RequestCall /> },
+  { path: "/privacy", element: <Privacy /> },
   { path: "/ringwood-taxis", element: <RingwoodTaxis /> },
   { path: "/bournemouth-taxis", element: <BournemouthTaxis /> },
   { path: "/hampshire-taxis", element: <HampshireTaxis /> },

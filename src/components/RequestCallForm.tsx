@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Phone, Mail, User, MapPin, MessageSquare, Send, CheckCircle } from "lucide-react";
 import { useId, useState } from "react";
+import { Link } from "react-router-dom";
 
 // UK phone regex: mobile or landline
 const ukPhoneRegex = /^(?:(?:\+44\s?|0)(?:7\d{3}|\d{2,4})\s?\d{3,4}\s?\d{3,4})$/;
@@ -249,6 +250,11 @@ const RequestCallForm = ({ compact = false }: RequestCallFormProps) => {
                     <Send className="w-4 h-4" />
                     {isSubmitting ? "Sending..." : "Request a Call Back"}
                 </button>
+
+                <p className="text-[10px] text-yp-dark/50 text-center font-heading">
+                    We only use your details to contact you about your journey.{" "}
+                    <Link to="/privacy" className="underline">Privacy policy</Link>
+                </p>
 
                 {sendError && (
                     <p role="alert" className="text-sm text-red-600 text-center font-heading">

@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import CookieBanner from "./CookieBanner";
 
 interface YellowPagesLayoutProps {
     children: ReactNode;
@@ -43,6 +44,7 @@ const YellowPagesLayout = ({ children, title, description }: YellowPagesLayoutPr
             </main>
 
             <Footer />
+            <CookieBanner />
         </div>
     );
 };

@@ -122,7 +122,10 @@ const Footer = () => (
             {/* Bottom bar */}
             <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/40">
                 <p>© {new Date().getFullYear()} Ringo's Taxis. All rights reserved.</p>
-                <p>Ringwood, Hampshire, United Kingdom</p>
+                <p>
+                    Ringwood, Hampshire, United Kingdom ·{" "}
+                    <Link to="/privacy" className="underline hover:text-yp-yellow transition-colors">Privacy &amp; Cookies</Link>
+                </p>
             </div>
         </div>
     </footer>
