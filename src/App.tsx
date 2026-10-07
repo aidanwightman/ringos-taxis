@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import type { ReactElement } from "react";
+import { Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import DisabledAccess from "./pages/DisabledAccess";
 import AirportTrips from "./pages/AirportTrips";
@@ -25,42 +26,42 @@ import RingwoodToGatwick from "./pages/airports/RingwoodToGatwick";
 import RingwoodToSouthampton from "./pages/airports/RingwoodToSouthampton";
 import RingwoodToBournemouth from "./pages/airports/RingwoodToBournemouth";
 
+/** Every real page on the site. Also used to prerender each page and build the sitemap. */
+export const routes: { path: string; element: ReactElement }[] = [
+  { path: "/", element: <Index /> },
+  { path: "/disabled-access", element: <DisabledAccess /> },
+  { path: "/airport-trips", element: <AirportTrips /> },
+  { path: "/service-areas", element: <ServiceAreas /> },
+  { path: "/request-a-call", element: <RequestCall /> },
+  { path: "/ringwood-taxis", element: <RingwoodTaxis /> },
+  { path: "/bournemouth-taxis", element: <BournemouthTaxis /> },
+  { path: "/hampshire-taxis", element: <HampshireTaxis /> },
+  { path: "/dorset-taxis", element: <DorsetTaxis /> },
+  { path: "/taxi-fordingbridge", element: <FordingbridgeTaxis /> },
+  { path: "/taxi-verwood", element: <VerwoodTaxis /> },
+  { path: "/taxi-ferndown", element: <FerndownTaxis /> },
+  { path: "/taxi-wimborne", element: <WimborneTaxis /> },
+  { path: "/taxi-christchurch", element: <ChristchurchTaxis /> },
+  { path: "/taxi-new-milton", element: <NewMiltonTaxis /> },
+  { path: "/taxi-burley", element: <BurleyTaxis /> },
+  { path: "/taxi-lyndhurst", element: <LyndhurstTaxis /> },
+  { path: "/taxi-lymington", element: <LymingtonTaxis /> },
+  { path: "/taxi-brockenhurst", element: <BrockenhurstTaxis /> },
+  { path: "/new-forest-taxis", element: <NewForestTaxis /> },
+  { path: "/ringwood-to-heathrow-taxi", element: <RingwoodToHeathrow /> },
+  { path: "/ringwood-to-gatwick-taxi", element: <RingwoodToGatwick /> },
+  { path: "/ringwood-to-southampton-airport-taxi", element: <RingwoodToSouthampton /> },
+  { path: "/ringwood-to-bournemouth-airport-taxi", element: <RingwoodToBournemouth /> },
+];
+
+/** Routes without a router, so the browser and the prerenderer can each supply their own. */
 const App = () => (
-  <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/disabled-access" element={<DisabledAccess />} />
-          <Route path="/airport-trips" element={<AirportTrips />} />
-          <Route path="/service-areas" element={<ServiceAreas />} />
-          <Route path="/request-a-call" element={<RequestCall />} />
-
-          {/* Location pages */}
-          <Route path="/ringwood-taxis" element={<RingwoodTaxis />} />
-          <Route path="/bournemouth-taxis" element={<BournemouthTaxis />} />
-          <Route path="/hampshire-taxis" element={<HampshireTaxis />} />
-          <Route path="/dorset-taxis" element={<DorsetTaxis />} />
-          <Route path="/taxi-fordingbridge" element={<FordingbridgeTaxis />} />
-          <Route path="/taxi-verwood" element={<VerwoodTaxis />} />
-          <Route path="/taxi-ferndown" element={<FerndownTaxis />} />
-          <Route path="/taxi-wimborne" element={<WimborneTaxis />} />
-          <Route path="/taxi-christchurch" element={<ChristchurchTaxis />} />
-          <Route path="/taxi-new-milton" element={<NewMiltonTaxis />} />
-          <Route path="/taxi-burley" element={<BurleyTaxis />} />
-          <Route path="/taxi-lyndhurst" element={<LyndhurstTaxis />} />
-          <Route path="/taxi-lymington" element={<LymingtonTaxis />} />
-          <Route path="/taxi-brockenhurst" element={<BrockenhurstTaxis />} />
-          <Route path="/new-forest-taxis" element={<NewForestTaxis />} />
-
-          {/* Airport route pages */}
-          <Route path="/ringwood-to-heathrow-taxi" element={<RingwoodToHeathrow />} />
-          <Route path="/ringwood-to-gatwick-taxi" element={<RingwoodToGatwick />} />
-          <Route path="/ringwood-to-southampton-airport-taxi" element={<RingwoodToSouthampton />} />
-          <Route path="/ringwood-to-bournemouth-airport-taxi" element={<RingwoodToBournemouth />} />
-
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-  </BrowserRouter>
+  <Routes>
+    {routes.map(({ path, element }) => (
+      <Route key={path} path={path} element={element} />
+    ))}
+    <Route path="*" element={<NotFound />} />
+  </Routes>
 );
 
 export default App;

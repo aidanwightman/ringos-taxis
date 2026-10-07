@@ -1,9 +1,8 @@
 import { Phone, MapPin, ArrowRight, PoundSterling, Clock, Shield } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import YellowPagesLayout from "@/components/YellowPagesLayout";
 import RequestCallForm from "@/components/RequestCallForm";
-import { usePageSEO } from "@/hooks/usePageSEO";
+import { usePageSEO, useJsonLd } from "@/hooks/usePageSEO";
 
 // Map of town names to their dedicated page routes
 const areaRouteMap: Record<string, string> = {
@@ -51,40 +50,33 @@ const LocationPage = ({
   const { pathname } = useLocation();
   const pageUrl = `https://www.ringotaxis.com${pathname}`;
 
-  useEffect(() => {
-    const schema = [
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ringotaxis.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.ringotaxis.com/service-areas" },
-          { "@type": "ListItem", "position": 3, "name": `${locationName} Taxis`, "item": pageUrl },
-        ],
+  const schema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ringotaxis.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.ringotaxis.com/service-areas" },
+        { "@type": "ListItem", "position": 3, "name": `${locationName} Taxis`, "item": pageUrl },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Taxi Service",
+      "name": `${locationName} Taxi Service — Ringo's Taxis`,
+      "description": metaDescription,
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://www.ringotaxis.com",
+        "name": "Ringo's Taxis",
+        "telephone": "+447387777202",
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Taxi Service",
-        "name": `${locationName} Taxi Service — Ringo's Taxis`,
-        "description": metaDescription,
-        "provider": {
-          "@type": "LocalBusiness",
-          "@id": "https://www.ringotaxis.com",
-          "name": "Ringo's Taxis",
-          "telephone": "+447387777202",
-        },
-        "areaServed": { "@type": "City", "name": locationName },
-        "url": pageUrl,
-      },
-    ];
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = `schema-location-${locationName.toLowerCase().replace(/\s+/g, "-")}`;
-    script.text = JSON.stringify(schema);
-    document.head.appendChild(script);
-    return () => { script.remove(); };
-  }, [locationName, metaDescription, pageUrl]);
+      "areaServed": { "@type": "City", "name": locationName },
+      "url": pageUrl,
+    },
+  ];
+  useJsonLd(`schema-location-${locationName.toLowerCase().replace(/\s+/g, "-")}`, schema);
 
   return (
     <YellowPagesLayout>
