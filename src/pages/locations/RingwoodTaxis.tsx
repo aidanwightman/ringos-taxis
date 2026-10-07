@@ -13,7 +13,7 @@ const RingwoodTaxis = () => (
       "Our Ringwood taxi service covers the entire BH24 postcode area including Ringwood town centre, Poulner, Moortown, Kingston, and all surrounding villages. We also run longer journeys to Bournemouth, Southampton, and beyond.",
       "Fixed prices, no hidden charges, and a driver you can trust. That's why Ringwood locals keep coming back to us. Book your local taxi today.",
     ]}
-    nearbyAreas={["The Furlong", "Poulner", "Moortown", "Kingston", "Bournemouth", "Ferndown", "Verwood", "Fordingbridge", "New Milton"]}
+    nearbyAreas={["The Furlong", "Poulner", "Moortown", "Kingston", "Bournemouth", "Ferndown", "Verwood", "Fordingbridge"]}
     mapSrc="https://www.openstreetmap.org/export/embed.html?bbox=-2.05%2C50.75%2C-1.55%2C50.95&layer=mapnik&marker=50.8467%2C-1.7878"
   />
 );

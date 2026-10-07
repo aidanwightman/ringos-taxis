@@ -9,7 +9,6 @@ const serviceAreas = [
     { name: "Bournemouth", route: "/bournemouth-taxis", desc: "Full coverage across Bournemouth town centre, seafront, and suburbs.", primary: true },
     { name: "Christchurch", route: "/taxi-christchurch", desc: "Serving Christchurch and Highcliffe for local and long-distance journeys.", primary: true },
     { name: "Ferndown", route: "/taxi-ferndown", desc: "Reliable taxi service covering Ferndown, West Moors, and the Dorset heathlands.", primary: true },
-    { name: "New Milton", route: "/taxi-new-milton", desc: "Quick pickups and drop-offs throughout New Milton and Barton-on-Sea.", primary: false },
     { name: "Verwood", route: "/taxi-verwood", desc: "Covering Verwood, Three Legged Cross, and surrounding villages.", primary: false },
     { name: "Wimborne", route: "/taxi-wimborne", desc: "Taxi service across Wimborne Minster and neighbouring areas.", primary: false },
     { name: "Fordingbridge", route: "/taxi-fordingbridge", desc: "Serving Fordingbridge and the wider Avon Valley area.", primary: false },

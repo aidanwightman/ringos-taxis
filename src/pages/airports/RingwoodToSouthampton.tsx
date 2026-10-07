@@ -24,7 +24,7 @@ const RingwoodToSouthampton = () => (
       "Wheelchair accessible vehicles (WAV) available",
       "Luggage assistance as standard",
     ]}
-    nearbyPickups={["Fordingbridge", "Verwood", "Burley", "Lyndhurst", "Brockenhurst", "New Milton", "Wimborne", "Ferndown", "Christchurch"]}
+    nearbyPickups={["Fordingbridge", "Verwood", "Burley", "Lyndhurst", "Brockenhurst", "Wimborne", "Ferndown", "Christchurch"]}
   />
 );
 

@@ -78,7 +78,6 @@ const Footer = () => (
                             { label: "Taxi Ferndown", path: "/taxi-ferndown" },
                             { label: "Taxi Wimborne", path: "/taxi-wimborne" },
                             { label: "Taxi Christchurch", path: "/taxi-christchurch" },
-                            { label: "Taxi New Milton", path: "/taxi-new-milton" },
                             { label: "Taxi Lyndhurst", path: "/taxi-lyndhurst" },
                             { label: "Taxi Lymington", path: "/taxi-lymington" },
                             { label: "Taxi Brockenhurst", path: "/taxi-brockenhurst" },

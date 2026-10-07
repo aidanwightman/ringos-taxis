@@ -24,7 +24,7 @@ const RingwoodToHeathrow = () => (
       "Early morning and late night availability",
       "Wheelchair accessible vehicles available",
     ]}
-    nearbyPickups={["Bournemouth", "Christchurch", "Ferndown", "Verwood", "Fordingbridge", "Wimborne", "New Milton", "Burley", "Lyndhurst"]}
+    nearbyPickups={["Bournemouth", "Christchurch", "Ferndown", "Verwood", "Fordingbridge", "Wimborne", "Burley", "Lyndhurst"]}
   />
 );
 

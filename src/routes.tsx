@@ -14,7 +14,6 @@ import VerwoodTaxis from "@/pages/locations/VerwoodTaxis";
 import FerndownTaxis from "@/pages/locations/FerndownTaxis";
 import WimborneTaxis from "@/pages/locations/WimborneTaxis";
 import ChristchurchTaxis from "@/pages/locations/ChristchurchTaxis";
-import NewMiltonTaxis from "@/pages/locations/NewMiltonTaxis";
 import BurleyTaxis from "@/pages/locations/BurleyTaxis";
 import LyndhurstTaxis from "@/pages/locations/LyndhurstTaxis";
 import LymingtonTaxis from "@/pages/locations/LymingtonTaxis";
@@ -42,7 +41,6 @@ export const routes: { path: string; element: ReactElement }[] = [
   { path: "/taxi-ferndown", element: <FerndownTaxis /> },
   { path: "/taxi-wimborne", element: <WimborneTaxis /> },
   { path: "/taxi-christchurch", element: <ChristchurchTaxis /> },
-  { path: "/taxi-new-milton", element: <NewMiltonTaxis /> },
   { path: "/taxi-burley", element: <BurleyTaxis /> },
   { path: "/taxi-lyndhurst", element: <LyndhurstTaxis /> },
   { path: "/taxi-lymington", element: <LymingtonTaxis /> },

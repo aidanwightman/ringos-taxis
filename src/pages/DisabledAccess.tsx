@@ -96,7 +96,7 @@ const DisabledAccess = () => {
                             Whether you need a <strong>WAV taxi in Ringwood</strong>, a <strong>wheelchair accessible vehicle in the New Forest</strong>, or <strong>disabled transport across Dorset and Hampshire</strong>, Ringo's Taxis is here to help. We provide mobility taxis for passengers with disabilities, including those who use manual or powered wheelchairs, mobility scooters, and walking frames.
                         </p>
                         <p className="text-sm sm:text-base text-yp-dark/70 leading-relaxed mb-4">
-                            Our <strong>accessible taxi service</strong> covers Ringwood, Fordingbridge, Verwood, Ferndown, Wimborne, Christchurch, New Milton, Lyndhurst, Lymington, Brockenhurst, and all surrounding areas. We also provide <strong>accessible airport transfers</strong> to Bournemouth Airport, Southampton Airport, Heathrow, and Gatwick — with full ramp access and wheelchair securing throughout.
+                            Our <strong>accessible taxi service</strong> covers Ringwood, Fordingbridge, Verwood, Ferndown, Wimborne, Christchurch, Lyndhurst, Lymington, Brockenhurst, and all surrounding areas. We also provide <strong>accessible airport transfers</strong> to Bournemouth Airport, Southampton Airport, Heathrow, and Gatwick — with full ramp access and wheelchair securing throughout.
                         </p>
                         <p className="text-sm sm:text-base text-yp-dark/70 leading-relaxed">
                             Carers and companions always travel free of charge. All drivers are disability-awareness trained. Call <strong>07387 777202</strong> to book your <strong>wheelchair friendly taxi</strong> — available 24/7.

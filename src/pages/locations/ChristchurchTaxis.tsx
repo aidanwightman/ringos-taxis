@@ -13,7 +13,7 @@ const ChristchurchTaxis = () => (
       "Airport transfers from Christchurch to Bournemouth Airport take around 20–25 minutes. We also cover Southampton Airport, Heathrow, and Gatwick — pre-book and we'll track your flight, so no waiting around.",
       "Call 07387 777202 to book your Christchurch taxi — day or night, available 24/7, 365 days a year. Wheelchair accessible vehicles also available.",
     ]}
-    nearbyAreas={["Highcliffe", "Mudeford", "Friars Cliff", "Burton", "Bournemouth", "Ringwood", "New Milton", "Bransgore"]}
+    nearbyAreas={["Highcliffe", "Mudeford", "Friars Cliff", "Burton", "Bournemouth", "Ringwood", "Bransgore"]}
     mapSrc="https://www.openstreetmap.org/export/embed.html?bbox=-1.84%2C50.70%2C-1.64%2C50.78&layer=mapnik&marker=50.7340%2C-1.7778"
   />
 );

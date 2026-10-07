@@ -24,7 +24,7 @@ const RingwoodToBournemouth = () => (
       "Wheelchair accessible vehicles (WAV) available",
       "Closest airport transfer option from Ringwood",
     ]}
-    nearbyPickups={["Ferndown", "Verwood", "Wimborne", "Christchurch", "New Milton", "Fordingbridge", "Burley", "Bransgore", "West Moors"]}
+    nearbyPickups={["Ferndown", "Verwood", "Wimborne", "Christchurch", "Fordingbridge", "Burley", "Bransgore", "West Moors"]}
   />
 );
 

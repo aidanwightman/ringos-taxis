@@ -74,7 +74,7 @@ const services = [
   {
     icon: MapPin,
     title: "Local Journeys",
-    desc: "Covering Ringwood, Bournemouth, Christchurch, Ferndown, Fordingbridge, New Milton, Verwood & all surrounding areas.",
+    desc: "Covering Ringwood, Bournemouth, Christchurch, Ferndown, Fordingbridge, Verwood & all surrounding areas.",
     image: "/branded-taxi-front.webp",
     link: "/service-areas",
     alt: "Ringo's Taxis branded wheelchair accessible taxi",
@@ -180,7 +180,7 @@ const AboutSection = () => (
             As your local taxis specialists, we offer competitive fixed prices with no hidden charges. Our drivers know every route across Hampshire and Dorset, so you always get there on time. From taxi near me searches to longer county runs, we cover it all.
           </p>
           <p className="text-sm sm:text-base text-yp-dark/70 leading-relaxed">
-            We serve: Ringwood, Bournemouth, Christchurch, Ferndown, Verwood, New Milton, Wimborne, Poole, Fordingbridge, Lymington, Wareham and all surrounding areas throughout Hampshire and Dorset.
+            We serve: Ringwood, Bournemouth, Christchurch, Ferndown, Verwood, Wimborne, Poole, Fordingbridge, Lymington, Wareham and all surrounding areas throughout Hampshire and Dorset.
           </p>
         </div>
         <div>

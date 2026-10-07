@@ -10,7 +10,6 @@ const areaRouteMap: Record<string, string> = {
   "Bournemouth": "/bournemouth-taxis",
   "Christchurch": "/taxi-christchurch",
   "Ferndown": "/taxi-ferndown",
-  "New Milton": "/taxi-new-milton",
   "Verwood": "/taxi-verwood",
   "Wimborne": "/taxi-wimborne",
   "Wimborne Minster": "/taxi-wimborne",

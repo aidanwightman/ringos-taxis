@@ -13,7 +13,6 @@ const areas = [
     "Ringwood",
     "Bournemouth",
     "Christchurch",
-    "New Milton",
     "Verwood",
     "Ferndown",
     "Fordingbridge",

@@ -13,7 +13,7 @@ const BurleyTaxis = () => (
       "Airport transfers from Burley to Bournemouth Airport (~30 mins), Southampton Airport, Heathrow, and Gatwick are available with pre-booking. We track your flight and arrive on time, every time.",
       "Call 07387 777202 any time to book your Burley taxi. Available 24 hours a day, 7 days a week — wheelchair accessible vehicles also available.",
     ]}
-    nearbyAreas={["Bransgore", "Crow", "Thorney Hill", "Bisterne", "Ringwood", "Christchurch", "New Milton", "Fordingbridge"]}
+    nearbyAreas={["Bransgore", "Crow", "Thorney Hill", "Bisterne", "Ringwood", "Christchurch", "Fordingbridge"]}
     mapSrc="https://www.openstreetmap.org/export/embed.html?bbox=-1.77%2C50.79%2C-1.57%2C50.87&layer=mapnik&marker=50.8235%2C-1.6612"
   />
 );
