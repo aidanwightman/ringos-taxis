@@ -1,32 +1,10 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { Phone, Mail, User, MapPin, MessageSquare, Send, CheckCircle } from "lucide-react";
 import { useId, useState } from "react";
+import { requestCallSchema, type RequestCallFormData } from "@/lib/requestCallSchema";
 import { Link } from "react-router-dom";
 
-// UK phone regex: mobile or landline
-const ukPhoneRegex = /^(?:(?:\+44\s?|0)(?:7\d{3}|\d{2,4})\s?\d{3,4}\s?\d{3,4})$/;
-
-const requestCallSchema = z
-    .object({
-        name: z.string().min(2, "Please enter your name"),
-        email: z.string().email("Please enter a valid email").or(z.literal("")),
-        phone: z
-            .string()
-            .regex(ukPhoneRegex, "Please enter a valid UK phone number")
-            .or(z.literal("")),
-        area: z.string().optional(),
-        message: z.string().optional(),
-        // Honeypot — real users never see or fill this
-        botcheck: z.string().optional(),
-    })
-    .refine((data) => data.email !== "" || data.phone !== "", {
-        message: "Please provide either an email address or a phone number",
-        path: ["email"],
-    });
-
-type RequestCallFormData = z.infer<typeof requestCallSchema>;
 
 // Public Web3Forms access key (safe to ship client-side). Submissions are emailed to the address it was created with.
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY as string | undefined;
