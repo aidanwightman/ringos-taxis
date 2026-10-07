@@ -74,7 +74,7 @@ const services = [
   {
     icon: MapPin,
     title: "Local Journeys",
-    desc: "Covering Ringwood, Bournemouth, Christchurch, Furlong, New Milton, Verwood & all surrounding areas.",
+    desc: "Covering Ringwood, Bournemouth, Christchurch, Ferndown, Fordingbridge, New Milton, Verwood & all surrounding areas.",
     image: "/branded-taxi-front.webp",
     link: "/service-areas",
     alt: "Ringo's Taxis branded wheelchair accessible taxi",

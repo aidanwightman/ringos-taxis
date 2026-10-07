@@ -23,7 +23,7 @@ const serviceAreas = [
 const ServiceAreas = () => {
     usePageSEO({
         title: "Ringwood Taxi | Bournemouth Taxi | Christchurch Cabs | Ringo's Taxis",
-        description: "Need a Ringwood Taxi or Bournemouth Taxi? We cover Ringwood, Bournemouth, Christchurch, Furlong, and all surrounding areas. Reliable 24/7 service.",
+        description: "Need a Ringwood Taxi or Bournemouth Taxi? We cover Ringwood, Bournemouth, Christchurch, Ferndown, Fordingbridge and all surrounding areas. Reliable 24/7 service.",
     });
 
     return (
