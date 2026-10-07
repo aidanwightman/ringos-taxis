@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import CookieBanner from "./CookieBanner";
+import MobileCallBar from "./MobileCallBar";
 
 interface YellowPagesLayoutProps {
     children: ReactNode;
@@ -11,7 +12,7 @@ interface YellowPagesLayoutProps {
 
 const YellowPagesLayout = ({ children, title, description }: YellowPagesLayoutProps) => {
     return (
-        <div className="min-h-screen flex flex-col bg-yp-cream">
+        <div className="min-h-screen flex flex-col bg-yp-cream pb-[calc(3.75rem+env(safe-area-inset-bottom))] lg:pb-0">
             <Navbar />
 
             {/* Page header if title provided */}
@@ -44,6 +45,7 @@ const YellowPagesLayout = ({ children, title, description }: YellowPagesLayoutPr
             </main>
 
             <Footer />
+            <MobileCallBar />
             <CookieBanner />
         </div>
     );

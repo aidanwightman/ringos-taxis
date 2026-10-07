@@ -34,3 +34,9 @@ describe("prerendered pages", () => {
     expect(head.title).toContain("Not Found");
   });
 });
+
+describe("mobile call bar", () => {
+  it.each(pages.map((p) => [p.path, p]))("%s has the Call Now button linking to the phone number", (_url, page) => {
+    expect(page.html).toMatch(/<a href="tel:07387777202"[^>]*>(?:(?!<\/a>).)*Call Now/s);
+  });
+});
