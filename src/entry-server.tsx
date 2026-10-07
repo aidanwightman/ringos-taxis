@@ -1,6 +1,7 @@
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server";
-import App, { routes } from "./App";
+import App from "./App";
+import { routes } from "./routes";
 import { beginSSRHead } from "./hooks/usePageSEO";
 
 export const paths = routes.map((r) => r.path);
