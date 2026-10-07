@@ -28,7 +28,7 @@ const features = [
 
 const taxiPhotos = [
     { src: "/branded-taxi-side.webp", alt: "Ringo's Taxis branded wheelchair accessible taxi, side view" },
-    { src: "/disabled-access.jpeg", alt: "Wheelchair ramp extended at the rear of the taxi" },
+    { src: "/disabled-access.webp", alt: "Wheelchair ramp extended at the rear of the taxi" },
     { src: "/branded-taxi-front-close.webp", alt: "Front of the Ringo's Taxis branded taxi with roof sign" },
 ];
 
@@ -47,7 +47,7 @@ const DisabledAccess = () => {
                         {/* Image */}
                         <div className="yp-border-thick overflow-hidden">
                             <img
-                                src="/disabled-access.jpeg"
+                                src="/disabled-access.webp"
                                 alt="Wheelchair accessible taxi with ramp extended for boarding"
                                 className="w-full h-64 sm:h-72 md:h-80 object-cover"
                             />

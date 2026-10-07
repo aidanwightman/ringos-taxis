@@ -8,9 +8,13 @@ import heroBg from "@/assets/hero-bg.webp";
 const HeroSection = () => (
   <section className="relative w-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px] overflow-hidden">
     {/* Background image */}
-    <div
-      className="absolute inset-0 bg-cover bg-center"
-      style={{ backgroundImage: `url(${heroBg})` }}
+    <img
+      src={heroBg}
+      alt=""
+      width={1360}
+      height={984}
+      {...{ fetchpriority: "high" }}
+      className="absolute inset-0 w-full h-full object-cover object-center"
     />
     {/* Overlay */}
     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
@@ -55,7 +59,7 @@ const services = [
     icon: Accessibility,
     title: "Disabled Access",
     desc: "Fully wheelchair accessible vehicles with ramp access. Safe, comfortable, and dignified transportation for all passengers.",
-    image: "/disabled-access.jpeg",
+    image: "/disabled-access.webp",
     link: "/disabled-access",
     alt: "Wheelchair accessible taxi with ramp",
   },
@@ -63,7 +67,7 @@ const services = [
     icon: Plane,
     title: "Airport Trips",
     desc: "Reliable airport transfers to Bournemouth, Southampton, Heathrow & Gatwick. On time, every time — no stress.",
-    image: "/terminal-3.jpeg",
+    image: "/terminal-3.webp",
     link: "/airport-trips",
     alt: "Taxi outside airport terminal",
   },
@@ -107,6 +111,7 @@ const ServicesSection = () => (
               <img
                 src={image}
                 alt={alt}
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute top-3 left-3 bg-yp-yellow p-2">

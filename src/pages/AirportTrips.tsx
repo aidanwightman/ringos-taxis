@@ -59,7 +59,7 @@ const AirportTrips = () => {
                         {/* Image */}
                         <div className="yp-border-thick overflow-hidden">
                             <img
-                                src="/terminal-3.jpeg"
+                                src="/terminal-3.webp"
                                 alt="Taxi outside airport terminal ready for transfer"
                                 className="w-full h-64 sm:h-72 md:h-80 object-cover"
                             />

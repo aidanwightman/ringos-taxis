@@ -30,7 +30,7 @@ const Footer = () => (
                 {/* Brand */}
                 <div>
                     <div className="flex items-center gap-3 mb-4">
-                        <img src="/ringo-logo.png" alt="Ringo's Taxis" className="h-10 w-10 object-contain" />
+                        <img src="/ringo-logo.webp" alt="Ringo's Taxis" loading="lazy" width={40} height={40} className="h-10 w-10 object-contain" />
                         <span className="font-display text-xl font-bold text-yp-yellow">
                             Ringo's Taxis
                         </span>

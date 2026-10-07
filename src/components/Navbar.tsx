@@ -38,8 +38,10 @@ const Navbar = () => {
                     {/* Logo */}
                     <Link to="/" className="flex items-center gap-3 group">
                         <img
-                            src="/ringo-logo.png"
+                            src="/ringo-logo.webp"
                             alt="Ringo's Taxis logo"
+                            width={56}
+                            height={56}
                             className="h-12 w-12 sm:h-14 sm:w-14 object-contain transition-transform group-hover:scale-105"
                         />
                         <div>
