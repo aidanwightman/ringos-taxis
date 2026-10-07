@@ -134,52 +134,7 @@
   }
 }
 
-/* Page fold effect */
-.page-fold {
-  position: relative;
-}
 
-.page-fold::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 80px 80px;
-  border-color: transparent transparent hsl(var(--yp-cream)) transparent;
-  box-shadow: -3px -3px 5px rgba(0,0,0,0.1);
-  transition: border-width 0.3s ease;
-  z-index: 10;
-}
-
-.page-fold::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(
-    135deg,
-    transparent 50%,
-    rgba(0,0,0,0.06) 50%,
-    rgba(0,0,0,0.02) 100%
-  );
-  z-index: 9;
-}
-
-.page-fold:hover::after {
-  border-width: 0 0 120px 120px;
-}
-
-.page-fold:hover::before {
-  width: 120px;
-  height: 120px;
-}
-
-/* Smooth page transitions */
 .page-enter {
   animation: pageSlideIn 0.4s ease-out;
 }

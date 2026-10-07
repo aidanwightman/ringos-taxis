@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { usePageStyle } from "@/hooks/usePageStyle";
 
 interface YellowPagesLayoutProps {
     children: ReactNode;
@@ -10,8 +9,6 @@ interface YellowPagesLayoutProps {
 }
 
 const YellowPagesLayout = ({ children, title, description }: YellowPagesLayoutProps) => {
-    const { isFoldStyle } = usePageStyle();
-
     return (
         <div className="min-h-screen flex flex-col bg-yp-cream">
             <Navbar />
@@ -39,7 +36,7 @@ const YellowPagesLayout = ({ children, title, description }: YellowPagesLayoutPr
             )}
 
             {/* Main content area */}
-            <main className={`flex-1 ${isFoldStyle ? "page-fold" : ""}`}>
+            <main className="flex-1">
                 <div className="page-enter">
                     {children}
                 </div>
